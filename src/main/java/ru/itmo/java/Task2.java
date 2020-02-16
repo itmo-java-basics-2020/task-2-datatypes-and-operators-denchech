@@ -11,21 +11,21 @@ public class Task2 {
      * - вывод 0.9
      */
     double getFractionalPart(double realNumber) {
-        return 0.0; //your code here
+        return realNumber % 1;
     }
 
     /**
      * Дан символ, верните его код. Не используйте явное приведение типов и любые библиотечные функции
      */
     int charCode(char c) {
-        return 0; //your code here
+        return c + 0; //your code here
     }
 
     /**
      * Даны 2 целых числа. Проверьте равны ли они
      */
     boolean testIfIntsEqual(Integer a, Integer b) {
-        return false; //your code here
+        return a.equals(b); //your code here
     }
 
     /**
@@ -38,13 +38,25 @@ public class Task2 {
      * @param inclusively входят ли границы в заданный даипазон
      */
     boolean numberInRange(Integer number, Integer leftBound, Integer rightBound, Boolean inclusively) {
-        return false; //your code here
+        if (number == null || leftBound == null || rightBound == null || inclusively == null)
+            return false;
+        Boolean inRange = false;
+        if (number >= leftBound && number <= rightBound){
+            inRange = true;
+        }
+        return inclusively == inRange; //your code here
     }
 
     /**
      * Даны 3 символа. Определите является ли хотя бы один из них цифрой 1..9
      */
     boolean atLeastOneIsDigit(char c1, char c2, char c3) {
+        if (c1 >= '0' && c1 <= '9')
+            return true;
+        if (c2 >= '0' && c2 <= '9')
+            return true;
+        if (c3 >= '0' && c3 <= '9')
+            return true;
         return false; //your code here
     }
 
