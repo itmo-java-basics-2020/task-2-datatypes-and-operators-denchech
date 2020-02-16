@@ -64,21 +64,30 @@ public class Task2 {
      * Даны два вещественных числа. Определите равны ли они
      */
     boolean areRealNumbersEqual(double a, double b) {
-        return false; //your code here
+        return Math.abs(a - b) < 1e-9;
     }
 
     /**
      * Дано трехзначное число 100 <= N <= 999. Найдите сумму его чисел.
      */
     int sumOfDigits(int n) {
-        return 0; //your code here
+        int sum = 0;
+        while (n > 0){
+            sum += n % 10;
+            n /= 10;
+        }
+        return sum; //your code here
     }
 
     /**
      * Дано натуральное число N <= 10000. Выведите следующее после N четное число. Например: N = 8, Result = 10
      */
     int nextEvenNumber(int n) {
-        return 0; //your code here
+        if (n % 2 == 0){
+            return n + 2;
+        } else{
+            return n + 1;
+        }
     }
 
     /**
@@ -88,14 +97,16 @@ public class Task2 {
      * своем кабинете
      */
     int schoolDesks(int num1, int num2, int num3) {
-        return 0; //your code here
+        return (num1 / 2 + num1 % 2)
+                + (num2 / 2 + num2 % 2)
+                + (num3 / 2 + num3 % 2); //your code here
     }
 
     /**
      * Дано натуральное число N >= 10. Выведите результат применения XOR к последним 2-м цифрам числа N
      */
     int xorDigits(int N) {
-        return 0; //your code here
+        return (N % 10) ^ ((N % 100) / 10); //your code here
     }
 
 }
