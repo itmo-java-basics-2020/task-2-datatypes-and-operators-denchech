@@ -104,5 +104,5 @@ public class Task2 {
     int xorDigits(int N) {
         return (N % 10) ^ ((N % 100) / 10); //your code here
     }
-//Some changes to make a diffrence to meke a pull request
+
 }
