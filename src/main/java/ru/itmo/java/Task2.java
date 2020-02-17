@@ -83,7 +83,11 @@ public class Task2 {
      * Дано натуральное число N <= 10000. Выведите следующее после N четное число. Например: N = 8, Result = 10
      */
     int nextEvenNumber(int n) {
-        return (n % 2 == 0) ? n + 2 : n + 1;
+        if (n % 2 == 0){
+            return n + 2;
+        } else{
+            return n + 1;
+        }
     }
 
     /**
